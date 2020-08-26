@@ -26,3 +26,19 @@ def f_usuario_input():
                 alcance = False
                 print('Opcao invalida')
     return int(escolha)
+
+def f_decimal_binario(decimal):
+    binario = []
+    resto = 0
+    while decimal > 1:
+        resto = decimal % 2
+        decimal //= 2
+        binario.append(resto)
+        if decimal == 1:
+            binario.append(1)
+            break
+        else:
+            continue
+    binario.reverse()
+    res_binario = "".join(map(str, binario))
+    return res_binario 
